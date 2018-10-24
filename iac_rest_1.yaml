@@ -47,14 +47,14 @@ resources:
       dns_ip:            { get_param: dns_ip }
       manager_ip:        { get_param: manager_ip }
 
-  coord:
+  controller:
     type: OS::Heat::ResourceGroup
     properties:
       count: 3
       resource_def:
         type: lib/managed_linux_server_one_nic.yaml
         properties:
-          server_name:       coord-%index%
+          server_name:       controller-%index%
           key_name:          { get_param: key_name }
           image:             { get_param: image_linux }
           flavor:            m1.medium
