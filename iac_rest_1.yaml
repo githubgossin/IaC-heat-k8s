@@ -57,7 +57,7 @@ resources:
           server_name:       controller-%index%
           key_name:          { get_param: key_name }
           image:             { get_param: image_linux }
-          flavor:            m1.medium
+          flavor:            m1.small
           sec_group_linux:   { get_param: sec_group_linux }
           public_net:        { get_param: public_net }
           admin_net:         { get_param: admin_net }
@@ -75,7 +75,7 @@ resources:
           server_name:       worker-%index%
           key_name:          { get_param: key_name }
           image:             { get_param: image_linux }
-          flavor:            m1.medium
+          flavor:            m1.small
           sec_group_linux:   { get_param: sec_group_linux }
           public_net:        { get_param: public_net }
           admin_net:         { get_param: admin_net }
